@@ -62,7 +62,10 @@
             <div class="separador">
                 <input type="submit" value="Guardar"> <!-- Aqui es donde se acciona el formulario y es mandado a registro.php -->
                 <button type="button" onclick="cerrar()">Cerrar Ventana</button> <!-- Boton para cerrar la ventana actual -->
+                <button type="button"> <a href="consultar.php"> Consultar datos </a> </button>
             </div>
+
+
         </form>
 
 

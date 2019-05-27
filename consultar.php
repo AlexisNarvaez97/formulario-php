@@ -20,10 +20,11 @@ $array = mysqli_fetch_array($query);
 
 
 
-    <form action="" method="">
+    <form action="eliminar.php" method="post">
         <table border="1">
             <thead>
                 <tr>
+                    <th>Mar</th>
                     <th>Codigo</th>
                     <th>Nombre</th>
                     <th>Apellido Paterno</th>
@@ -39,6 +40,7 @@ $array = mysqli_fetch_array($query);
                 <?php
                 foreach ($query as $row) { ?>
                     <tr>
+                        <td><input name="checkbox[]" type="checkbox" value="<?php echo $row['Codigo']; ?>"></td>
                         <td><?php echo $row['Codigo']; ?> </td>
                         <td><?php echo $row['Nombre']; ?> </td>
                         <td><?php echo $row['Ap_paterno']; ?> </td>
@@ -57,6 +59,8 @@ $array = mysqli_fetch_array($query);
         }
         ?>
         </table>
+        <br>
+        <input type="submit" value="Eliminar">
     </form>
 </body>
 
