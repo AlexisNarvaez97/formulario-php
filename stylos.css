@@ -1,0 +1,32 @@
+h1 { /* El H1 su color cambia a rojo, se alinea al centro y se cancela sus margenes para no estar tan espaciado del <hr> */
+    color: red;
+    text-align: center;
+    margin: 0;
+}
+
+form { /* Se alinea todo el formulario al centro y un margen de arriba de 20px*/
+    text-align: center;
+    margin-top: 20px;
+}
+
+label { /* Se le da un display de inline-block para darles un ancho para que esten alineados. */
+    display: inline-block;
+    width: 250px;
+}
+
+.botones { /* Separar los botones un poco del formulario de arriba */
+    margin-top: 10px;
+}
+
+input { /* Separacion entre los inputs */
+    margin-top: 5px;
+}
+
+#tabla { /* Centrar la tabla donde se muestran los datos */
+    margin: 0 auto;
+}
+
+.separador { /* Margen de arriba y abajo para los botones de guardar y cerrar ventana */
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
