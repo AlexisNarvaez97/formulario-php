@@ -5,7 +5,7 @@
     $array = mysqli_fetch_array($query); //Retorna un array de strings de toda la tabla que fue seleccionada en este caso PERSONAL.
 ?>
 
-<!DOCTYPE html> <!-- Estructura basica de un documento HTMO QUE TODOS SABEMOS. -->
+<!DOCTYPE html> <!-- Estructura basica de un documento HTML QUE TODOS SABEMOS. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">

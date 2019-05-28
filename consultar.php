@@ -13,12 +13,31 @@ $array = mysqli_fetch_array($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Consultar datos</title>
+    <style>
+        .botonete {
+            color: #800080;
+            text-decoration: underline;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        .text-align-center {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
 
-
+        <h1>Modificar un registro de cliente</h1>
 
     <form action="eliminar.php" method="post">
         <table border="1">
@@ -34,6 +53,7 @@ $array = mysqli_fetch_array($query);
                     <th>Fecha nacimiento</th>
                     <th>Direccion</th>
                     <th>Ciudad</th>
+                    <th>Registro</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,9 +70,8 @@ $array = mysqli_fetch_array($query);
                         <td><?php echo $row['Fecha_nac']; ?> </td>
                         <td><?php echo $row['Direccion']; ?> </td>
                         <td><?php echo $row['Ciudad']; ?> </td>
-                    <tr>
-
-
+                        <td><a class="botonete" onclick="modificar(<?php echo $row['Codigo']?>)">Editar</a></td>
+                    <tr></tr>
                 </tbody>
 
             <?php
@@ -60,8 +79,15 @@ $array = mysqli_fetch_array($query);
         ?>
         </table>
         <br>
-        <input type="submit" value="Eliminar">
+        <div class="text-align-center">
+            <input type="submit" value="Eliminar">
+        </div>
     </form>
+<script>
+    function modificar(cod) {
+        window.location = "modificar.php?parametro="+cod;
+    }
+</script>
 </body>
 
 </html>
